@@ -3,12 +3,6 @@ unbeatable tictactoe using the minimax algorithm
 
 ![screenshot](public/screenshot.png)
 
-## Getting Started
-clone or download this repository and run:
-```
-npm start
-```
-
 ## Minimax Algorithm
 
 ***Minimax*** is a kind of backtracking algorithm used in decision-making game theory. It calculates the optimal move, assuming that the opponent plays optimally.
@@ -22,6 +16,12 @@ There are 3 final state in TicTacToe: **Win**, **Tie**, and **Loose**. This can 
 ![minimax-diagram](public/minimax-diagram.png)
 
 For X's turn which is the minimizing player, you want to pick a move with the lowest score which sets the parent node's score to -1. For O's turn, you want to pick a move with the highest score, which is +1. Calculating the scores for all possible moves on every turn and maximizing or minimizing accordingly will result in the best move possible.
+
+## Getting Started
+clone or download this repository and run:
+```
+npm start
+```
 
 ## Built With
 * [React.js](https://reactjs.org/)
