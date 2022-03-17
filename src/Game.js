@@ -129,7 +129,6 @@ function minimax(squares, depth, isMaxizing) {
   }
 
   if(isMaxizing) {
-    let xx = squares.slice();
     let maxI;
     let maxScore = -Infinity;
     for (let i=0; i<squares.length; i++) {
@@ -138,7 +137,7 @@ function minimax(squares, depth, isMaxizing) {
         let score = minimax(squares, depth+1, false)[0];
         squares[i] = null;
 
-        xx[i] = score;
+        console.log("maximizing", squares, score)
 
         if (score > maxScore) {
           maxScore = score;
@@ -155,6 +154,8 @@ function minimax(squares, depth, isMaxizing) {
         squares[i] = PLAYER
         let score = minimax(squares, depth+1, true)[0];
         squares[i] = null;
+
+        console.log("minimizing", squares, score);
 
         if (score < minScore) {
           minScore = score;
