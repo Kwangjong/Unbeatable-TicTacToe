@@ -1,7 +1,7 @@
 # Unbeatable-Tictactoe
 unbeatable tictactoe using the minimax algorithm
 
-![screenshot](public/screenshot.png)
+![demo](src/demo.gif)
 
 ## Minimax Algorithm
 
@@ -13,7 +13,7 @@ The maximizing Player is the player who wants to win, and the minimizing player 
 
 There are 3 final state in TicTacToe: **Win**, **Tie**, and **Loose**. This can be represented as scores. **+1** for **win**, **0** for **tie**, and **-1** for **loose**. To calculate the optimal move for the AI to make, you want to choose the move that results in the highest score for the AI and the lowest score for the human player. Refer to the diagram below.
 
-![minimax-diagram](public/minimax-diagram.png)
+![minimax-diagram](src/minimax-diagram.png)
 
 For X's turn which is the minimizing player, you want to pick a move with the lowest score which sets the parent node's score to -1. For O's turn, you want to pick a move with the highest score, which is +1. Calculating the scores for all possible moves on every turn and maximizing or minimizing accordingly will result in the best move possible.
 
