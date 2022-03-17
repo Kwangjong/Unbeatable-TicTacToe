@@ -1,5 +1,5 @@
 # Unbeatable-Tictactoe
-unbeatable Tictactoe using the minimax algorithm
+unbeatable tictactoe using the minimax algorithm
 
 ![screenshot](public/screenshot.png)
 
