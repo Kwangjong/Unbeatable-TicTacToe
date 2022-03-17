@@ -1,6 +1,8 @@
 # Unbeatable-Tictactoe
 unbeatable Tictactoe using minimax algorithm
 
+![screenshot](public/screenshot.png)
+
 ## Getting Started
 Clone or Download this reopsitory and rund
 ```
