@@ -11,7 +11,7 @@ unbeatable tictactoe using the minimax algorithm
 There are two players in the minimax: ***Maximizing Player*** and ***Minimizing Player***.
 The maximizing Player is the player who wants to win, and the minimizing player is the player who needs to lose, which is the opponent. In this game, AI is the maximizing player and the human player is the minimizing player. 
 
-There are 3 final state in TicTacToe: **Win**, **Tie**, and **Loose**. This can be represented as scores. **+1** for **win**, **0** for **tie**, and **-1** for **loose**. To calculate the optimal move for the AI to make, you want to choose the move that results in the highest score for the AI and the lowest score for the human player. Refer to the diagram below.
+There are 3 final state in TicTacToe: **Win**, **Tie**, or **Lose**. This can be represented as scores. **+1** for **win**, **0** for **tie**, and **-1** for **lose**. To calculate the optimal move for the AI to make, you want to choose the move that results in the highest score for the AI and the lowest score for the human player. Refer to the diagram below.
 
 ![minimax-diagram](src/minimax-diagram.png)
 
