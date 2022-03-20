@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Unbeatable-TicTacToe/static/css/main.249ec106.css",
+    "main.js": "/Unbeatable-TicTacToe/static/js/main.caaf7763.js",
+    "static/media/logo.svg": "/Unbeatable-TicTacToe/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Unbeatable-TicTacToe/index.html",
+    "main.249ec106.css.map": "/Unbeatable-TicTacToe/static/css/main.249ec106.css.map",
+    "main.caaf7763.js.map": "/Unbeatable-TicTacToe/static/js/main.caaf7763.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.249ec106.css",
+    "static/js/main.caaf7763.js"
+  ]
+}
