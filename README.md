@@ -1,6 +1,8 @@
 # Unbeatable-Tictactoe
 unbeatable tictactoe using the minimax algorithm
 
+[Demo](https://kwangjong.github.io/Unbeatable-TicTacToe)
+
 ![demo](src/demo.gif)
 
 ## Minimax Algorithm
