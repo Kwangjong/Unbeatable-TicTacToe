@@ -12,11 +12,10 @@ function Square(props) {
   );
 }
 /**
- * 'X' wins: -1
- * 'O' wins: 1
+ * 'O' wins : 1 // AI
+ * 'X' wins : -1 // human player
  *  tie : 0
- * @param  {[type]} squares [description]
- * @return {[type]}         [description]
+ *  null : if there is no winner
  */
 function calculateWinner(squares) {
   //all possible wins
@@ -31,6 +30,7 @@ function calculateWinner(squares) {
     [2, 4, 6],
   ];
 
+  // check for all possible wins
   for (let i=0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
@@ -44,7 +44,7 @@ function calculateWinner(squares) {
     if(!squares[i])
       availableSpot++;
   }
-  return availableSpot === 0 ? 0 : null;
+  return availableSpot === 0 ? 0 : null; // return null if game is not finished
 }
 
 class Board extends React.Component {
@@ -121,9 +121,16 @@ function ai(board) {
   board.setState({squares: squares, active: !board.state.active});
 }
 
-//returns bestScore and index of the move as an array
+/**
+ * squares is one-dimensional array with a size of 3*3.
+ * each square contains either 'O', 'X', or null.
+ * 
+ * returns bestScore and index of the move as an array
+ * 0 : bestScore
+ * 1 : index
+ */
 function minimax(squares, depth, isMaxizing) {
-  let result = calculateWinner(squares);
+  let result = calculateWinner(squares); // basecase
   if(result !== null) {
     return [result, null];
   }
@@ -132,10 +139,10 @@ function minimax(squares, depth, isMaxizing) {
     let maxI;
     let maxScore = -Infinity;
     for (let i=0; i<squares.length; i++) {
-      if (!squares[i]) {
-        squares[i] = AI;
-        let score = minimax(squares, depth+1, false)[0];
-        squares[i] = null;
+      if (!squares[i]) { // find empty square
+        squares[i] = AI; // AI = 'O';
+        let score = minimax(squares, depth+1, false)[0]; // recursive call
+        squares[i] = null;  // undo the move
 
         if (score > maxScore) {
           maxScore = score;
@@ -148,10 +155,10 @@ function minimax(squares, depth, isMaxizing) {
     let minI;
     let minScore = Infinity;
     for (let i=0; i<squares.length; i++) {
-      if (!squares[i]) {
-        squares[i] = PLAYER
-        let score = minimax(squares, depth+1, true)[0];
-        squares[i] = null;
+      if (!squares[i]) { // find empty square
+        squares[i] = PLAYER; // PLAYER = 'X'
+        let score = minimax(squares, depth+1, true)[0]; // recursive call
+        squares[i] = null; // undo the move
 
         if (score < minScore) {
           minScore = score;
